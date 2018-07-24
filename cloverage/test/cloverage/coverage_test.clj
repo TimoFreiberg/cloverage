@@ -209,7 +209,8 @@
     (t/is (compare-colls (cov/find-nses ["test/cloverage/sample"] [])
                          ["cloverage.sample.dummy-sample"
                           "cloverage.sample.read-eval-sample"
-                          "cloverage.sample.multibyte-sample"])))
+                          "cloverage.sample.multibyte-sample"
+                          "cloverage.sample.cyclic-dependency"])))
   (t/testing "only matching namespaces (from classpath) are returned when only
             regex patterns are provided:"
     (t/testing "single pattern case"
